@@ -1,13 +1,23 @@
+[workspace]
+resolver = "2"
+members = [
+  "clients/cli",
+  "interface",
+  "program",
+]
+
 [package]
 name = "spl-transfer-hook-interface"
 version = "0.6.4"
-description = "Solana Program Library Transfer Hook Interface"
-edition = "2021"
-license = "Apache-2.0"
+authors = ["Anza Maintainers <maintainers@anza.xyz>"]
 repository = "https://github.com/solana-program/transfer-hook"
+homepage = "https://solana-program.com"
+license = "Apache-2.0"
+edition = "2021"
 
 [lib]
 crate-type = ["cdylib", "lib"]
+path = "interface/src/lib.rs"
 
 [dependencies]
 solana-program = { git = "https://github.com/hamkj7hpo/solana.git", rev = "5208a7870826307290c30b7d80768f40267433a1" }
