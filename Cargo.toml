@@ -1,38 +1,17 @@
-[workspace]
-resolver = "2"
-members = [
-  "clients/cli",
-  "interface",
-  "program",
-]
-
-[workspace.package]
-authors = ["Anza Maintainers <maintainers@anza.xyz>"]
-repository = "https://github.com/solana-program/transfer-hook"
-homepage = "https://solana-program.com"
-license = "Apache-2.0"
+[package]
+name = "spl-transfer-hook-interface"
+version = "0.6.4"
+description = "Solana Program Library Transfer Hook Interface"
 edition = "2021"
+license = "Apache-2.0"
+repository = "https://github.com/solana-program/transfer-hook"
 
-[workspace.lints.rust.unexpected_cfgs]
-level = "warn"
-check-cfg = [
-    'cfg(target_os, values("solana"))',
-    'cfg(feature, values("frozen-abi", "no-entrypoint", "custom-heap", "custom-panic"))',
-]
+[lib]
+crate-type = ["cdylib", "lib"]
 
-[workspace.metadata.cli]
-solana = "2.3.4"
-
-# Specify Rust toolchains for rustfmt, clippy, and build.
-# Any unprovided toolchains default to stable.
-[workspace.metadata.toolchains]
-format = "nightly-2025-02-16"
-lint = "nightly-2025-02-16"
-
-[workspace.metadata.spellcheck]
-config = "scripts/spellcheck.toml"
-
-[workspace.metadata.release]
-pre-release-commit-message = "Publish {{crate_name}} v{{version}}"
-tag-message = "Publish {{crate_name}} v{{version}}"
-consolidate-commits = false
+[dependencies]
+solana-program = { git = "https://github.com/hamkj7hpo/solana.git", rev = "5208a7870826307290c30b7d80768f40267433a1" }
+spl-discriminator = "0.4.1"
+spl-pod = { git = "https://github.com/hamkj7hpo/spl-pod.git", rev = "0ff7d641b198149f6e0b1265e85b7258db87e254" }
+spl-program-error = "0.4.2"
+bytemuck = { version = "1.17.1", features = ["derive"] }
