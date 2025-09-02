@@ -20,7 +20,7 @@ crate-type = ["cdylib", "lib"]
 path = "interface/src/lib.rs"
 
 [dependencies]
-solana-program = { git = "https://github.com/hamkj7hpo/solana.git", rev = "5208a7870826307290c30b7d80768f40267433a1" }
+solana-program = { git = "https://github.com/solana-labs/solana.git", rev = "b1e378009ffee4c75965723d3317fccbebcf2524" }
 spl-discriminator = "0.4.1"
 spl-pod = { git = "https://github.com/hamkj7hpo/spl-pod.git", rev = "0ff7d641b198149f6e0b1265e85b7258db87e254" }
 spl-program-error = "0.4.2"
