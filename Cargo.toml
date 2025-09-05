@@ -10,8 +10,6 @@ members = [
 name = "spl-transfer-hook-interface"
 version = "0.6.4"
 authors = ["Anza Maintainers <maintainers@anza.xyz>"]
-repository = "https://github.com/solana-program/transfer-hook"
-homepage = "https://solana-program.com"
 license = "Apache-2.0"
 edition = "2021"
 
