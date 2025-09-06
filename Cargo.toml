@@ -18,7 +18,7 @@ crate-type = ["cdylib", "lib"]
 path = "interface/src/lib.rs"
 
 [dependencies]
-solana-program = { git = "https://github.com/hamkj7hpo/solana.git", branch = "safe-pump-compat", package = "solana-program" }
+solana-program = { git = "https://github.com/hamkj7hpo/solana.git", rev = "079536b934de349771fa8a0e9945bcef01f529cc", package = "solana-program" }
 spl-discriminator = "0.4.1"
 spl-pod = { git = "https://github.com/hamkj7hpo/spl-pod.git", rev = "0ff7d641b198149f6e0b1265e85b7258db87e254" }
 spl-program-error = "0.4.2"
