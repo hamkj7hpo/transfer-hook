@@ -23,3 +23,6 @@ spl-discriminator = "0.4.1"
 spl-pod = { git = "https://github.com/hamkj7hpo/spl-pod.git", rev = "0ff7d641b198149f6e0b1265e85b7258db87e254" }
 spl-program-error = "0.4.2"
 bytemuck = { version = "1.17.1", features = ["derive"] }
+
+[patch.crates-io]
+zeroize = "1.3.0"
