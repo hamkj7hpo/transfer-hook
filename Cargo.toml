@@ -24,5 +24,3 @@ spl-pod = { git = "https://github.com/hamkj7hpo/spl-pod.git", rev = "0ff7d641b19
 spl-program-error = "0.4.2"
 bytemuck = { version = "1.17.1", features = ["derive"] }
 
-[patch.crates-io]
-zeroize = { version = "=1.3.0" }
