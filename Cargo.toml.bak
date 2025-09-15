@@ -1,0 +1,26 @@
+[workspace]
+resolver = "2"
+members = [
+  "clients/cli",
+  "interface",
+  "program",
+]
+
+[package]
+name = "spl-transfer-hook-interface"
+version = "0.6.4"
+authors = ["Anza Maintainers <maintainers@anza.xyz>"]
+license = "Apache-2.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+path = "interface/src/lib.rs"
+
+[dependencies]
+solana-program = { git = "https://github.com/hamkj7hpo/solana.git", branch = "safe-pump-compat" }
+spl-discriminator = "0.4.1"
+spl-pod = { git = "https://github.com/hamkj7hpo/spl-pod.git", rev = "0ff7d641b198149f6e0b1265e85b7258db87e254" }
+spl-program-error = "0.4.2"
+bytemuck = { version = "1.17.1", features = ["derive"] }
+
